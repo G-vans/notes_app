@@ -1,0 +1,8 @@
+<% if user_signed_in? %>
+    <div>
+    <h1> Welcome <%= current_user.email %> to your Notes App </h1>
+    <%= link_to "Click here to view your notes", notes_path %>
+    </div>
+    <% else %>
+    <%= link_to "Log In", new_user_session %>
+    <% end %>
